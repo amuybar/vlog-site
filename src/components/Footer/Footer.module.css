@@ -24,7 +24,7 @@
   flex-direction: column;
   gap: 10px;
   align-items: center;
-  max-width: 500px; /* Limit form width for responsiveness */
+  max-width: 900px; 
 }
 
 .newsletter input {

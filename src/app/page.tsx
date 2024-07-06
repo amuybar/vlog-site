@@ -76,7 +76,7 @@ export default function Home() {
               </div>
             </Link>
 
-            <Link href='/hairstyle'>
+            <Link href='/makeup'>
               <div className={styles.productCard}>
               <h3>Make Up</h3>
                 <p>Trendy and flashy new Hairstyle in town</p>
@@ -91,7 +91,7 @@ export default function Home() {
               </div>
             </Link>
 
-            <Link href='/hairstyle'>
+            <Link href='/skincare'>
               <div className={styles.productCard}>
                 <Image
                   src='/images/beauty-and-spa-colorful-logo-design-template-vector-24836416.avif'

@@ -1,0 +1,119 @@
+.hairstylePage {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hairstylePage h2 {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.videoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.videoCard {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.videoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.videoCard iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.videoInfo {
+  padding: 1rem;
+}
+
+.videoInfo h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: bold;
+}
+
+.likeBtn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.likeBtn:hover {
+  background-color: #45a049;
+}
+
+.commentBtn {
+  background-color: #2196F3;
+  color: white;
+}
+
+.commentBtn:hover {
+  background-color: #0b7dda;
+}
+
+.dislikeBtn {
+  background-color: #f44336;
+  color: white;
+}
+
+.dislikeBtn:hover {
+  background-color: #da190b;
+}
+
+@media (max-width: 768px) {
+  .hairstylePage h2 {
+    font-size: 2rem;
+  }
+
+  .videoGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hairstylePage h2 {
+    font-size: 1.5rem;
+  }
+
+  .videoGrid {
+    grid-template-columns: 1fr;
+  }
+}

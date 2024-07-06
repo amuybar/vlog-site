@@ -1,95 +1,129 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
+      {/* hero */}
+      <section>
+        <div className={styles.hero}>
+          <div className={styles.heroText}>
+            <p>Discover the beauty secrets of the world.</p>
+          </div>
+          {/* social media icons */}
+          <div className={styles.socialIcons}>
+            <Link className="icon__link" href='/'>
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
+            src='/icons/fb.png'
+            alt='Facebook'
+            width={50}
+            height={50}
             />
-          </a>
+            </Link>
+            <Link className="icon__link" href='/'>
+            <Image
+            src='/icons/tt.png'
+            alt='Tiktok'
+            width={50}
+            height={50}
+            />
+            </Link>
+            <Link className="icon__link" href='/'>
+            <Image
+            src='/icons/yt.png'
+            alt='Youtube'
+            width={50}
+            height={50}
+            />
+            </Link>
+            <Link className="icon__link" href='/'>
+            <Image
+            src='/icons/x.png'
+            alt='Twitter/X'
+            width={50}
+            height={50}
+            />
+            </Link>
+            <Link className="icon__link" href='/'>
+            <Image
+            src='/icons/wh.png'
+            alt='Whatsapp'
+            width={50}
+            height={50}
+            />
+            </Link>
+
+            </div>
         </div>
-      </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      </section>
+      {/* popular products */}
+      <section>
+        <div className={styles.popularProducts}>
+          <div className={styles.productCards}>
+            <Link href='/hairstyle'>
+              <div className={styles.productCard}>
+                <Image
+                  src='/images/afro-woman-vector-1164572.avif'
+                  alt='Hairstyle'
+                  width={200}
+                  height={300}
+                />
+                <h3>HairStyle</h3>
+                <p>Trendy and flashy new Hairstyle in town</p>
+                
+              </div>
+            </Link>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+            <Link href='/hairstyle'>
+              <div className={styles.productCard}>
+              <h3>Make Up</h3>
+                <p>Trendy and flashy new Hairstyle in town</p>
+                
+                <Image
+                  src='/images/beautiful-woman-and-makeup-artist-in-a-beauty-vector-32202641.avif'
+                  alt='Hairstyle'
+                  width={200}
+                  height={300}
+                />
+                
+              </div>
+            </Link>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+            <Link href='/hairstyle'>
+              <div className={styles.productCard}>
+                <Image
+                  src='/images/beauty-and-spa-colorful-logo-design-template-vector-24836416.avif'
+                  alt='Hairstyle'
+                  width={200}
+                  height={300}
+                />
+                <h3>HairStyle</h3>
+                <p>Trendy and flashy new Hairstyle in town</p>
+                
+              </div>
+            </Link>
+         </div>
+        </div>
+      </section>
+      {/* About //video embeded */}
+      <section>
+  <div className={styles.about} id="about">
+    <div className={styles.aboutText}>
+      <h2>About Lea Beauty</h2>
+      <p>
+        Lea Beauty is a beauty and wellness company that specializes in offering high-quality products and services. Our mission is to create a place where people can find their perfect beauty and wellness.
+      </p>
+    </div>
+    {/* video embeded */}
+    
+    <div className={styles.video}>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/WdhwU_JCINw?si=rYukyYR_Cf9lVUNK" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" />  
+    </div>
+  </div>
+</section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
   );
 }
